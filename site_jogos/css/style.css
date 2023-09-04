@@ -9,14 +9,42 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-navbar {
+.navbar {
     display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
-    flex-flow: row wrap;
+    flex: 20%;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 36px;
 }
 
 .menu {
-    flex-flow: row wrap;
+    flex: 70%;
+    text-align: right;
+    margin-right: 5%;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.menu a:hover {
+    border-bottom: 2px solid white;
 }

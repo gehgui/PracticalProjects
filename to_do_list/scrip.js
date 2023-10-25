@@ -30,6 +30,8 @@ function mostraTarefas() {
 
     listaCompleta.innerHTML = novaLi;
 
+    localStorage.setItem('lista', JSON.stringify(minhaListaDeItens));
+
 }
 
 function deletarItem(posicao) {
@@ -42,4 +44,13 @@ function concluirTarefa(posicao) {
     mostraTarefas();
 }
 
+function recarregarTarefas() {
+    const tarefasDoLocalStorage = localStorage.getItem('lista');
+    if (tarefasDoLocalStorage) {
+        minhaListaDeItens = JSON.parse(tarefasDoLocalStorage);
+    }
+    mostraTarefas();
+}
+
+recarregarTarefas();
 button.addEventListener('click', adicionarNovaTarefa);
